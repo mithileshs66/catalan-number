@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+unsigned catalan(unsigned n)
+{
+    if(n<=1)
+    {
+        return 1;
+    }
+   
+        unsigned num=0;
+        for(int i=0;i<n;i++)
+        {
+            num=num+(catalan(i)*catalan(n-i-1));
+        }
+ return num;
+}
+int main()
+{   unsigned n;
+    cout<<"Enter the number\n";
+    cin>>n;
+    for(int i=0;i<n;i++)
+     {cout<<catalan(i)<<" ";
+     }
+}
